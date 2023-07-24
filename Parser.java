@@ -469,32 +469,35 @@ import java.util.Stack;
 	
 	//Traverse the AST in pre-order and print the tokens
 	
-	private void preOrder(Node n, int level) {
+	private void preOrder(Node n, int level, String AST) {
 		String dot = "";
 		for (int i = 0 ; i < level ; i++)
 			dot = dot + ".";
 		System.out.println(dot+""+n.getToken());
-		if (n.getleftChild() != null) {
-			preOrder(n.getleftChild(), level+1);
+		AST = AST + dot + "" + n.getToken() + "\n";
+		if (n.getLeftChild() != null) {
+			preOrder(n.getLeftChild(), level+1, AST);
 		}
 		if (n.getRightChild() != null) {
-			preOrder(n.getRightChild(), level);
+			preOrder(n.getRightChild(), level, AST);
 		}
 	}
 	//Print the generated Abstract Syntax Tree
 	
-	private void printAST() {
+	private String printAST() {
 		Node ast = stack.pop();
-		preOrder(ast, 0);
+		String AST = "";
+		preOrder(ast, 0, AST);
+		return AST;
 	}
 	
 	//Start Parsing and call PRINT upon completion
 	
-	public void startParsing() {
+	public String startParsing() {
 		token = l.getToken();
 		E();
 		if (l.getType().equals("<EOF>")) {	//EOF reached
-			printAST();
+			return printAST();
 		}
 	}
 }
