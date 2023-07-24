@@ -37,6 +37,7 @@ import java.util.Stack;
 			Parser p = new Parser(fileName);
             String AST;
 			AST = p.startParsing();
+			System.out.print(AST);
 		}
 		else {
 			System.err.println("Error: Illegal parameters");
