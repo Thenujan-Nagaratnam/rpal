@@ -17,7 +17,8 @@ class Traversal {
         return this.root;
     }
 
-    private void setRoot(Node root) {
+
+    public void setRoot(Node root) {
         this.root = root;
     }
 

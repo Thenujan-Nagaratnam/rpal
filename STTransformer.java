@@ -285,9 +285,9 @@ public class STTransformer extends Traversal {
         }
     }
 
-    void constructAST(String rpalFileName) {
-        p = new ASTParser(rpalFileName);
-        p.preOrderTraversal();
+    void constructAST(Node AST) {
+        p = new Traversal();
+        p.setRoot(AST);
     }
 
     void constructST() {

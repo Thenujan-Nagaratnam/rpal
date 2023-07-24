@@ -483,7 +483,7 @@ import java.util.Stack;
 		}
 	}
 	//Print the generated Abstract Syntax Tree
-	
+
 	private String printAST() {
 		Node ast = stack.pop();
 		String AST = "";
@@ -502,5 +502,16 @@ import java.util.Stack;
 		}
 		return AST;
 	}
+
+	 public Node getAST() {
+		 token = l.getToken();
+		 E();
+		 Node AST = null;
+		 if (l.getType().equals("<EOF>")) {	//EOF reached
+			 AST = stack.pop();
+		 }
+		 return AST;
+	 }
+
 }
 
