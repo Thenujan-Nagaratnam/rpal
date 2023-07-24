@@ -12,7 +12,7 @@
 	private Node leftChild;
 	private Node rightChild;
 
-	 Node() {	 }
+	 Node() { }
 
     Node(String token) {
         this.token = token;

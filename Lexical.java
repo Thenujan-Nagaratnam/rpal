@@ -26,7 +26,7 @@ class Lexical {
 	
 	//Constructor to open file for reading
 
-	Lexical(){};
+	Lexical(){ };
 	
 	Lexical(String fileName) {
 		try {
