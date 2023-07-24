@@ -1,0 +1,2 @@
+let even A = ((A/2)*2 eq A) -> 'even' | 'odd'
+in Print(even 4)
