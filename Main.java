@@ -12,7 +12,7 @@ import java.util.Stack;
  * **************************************************
  */
 
- public class P1 {
+ public class Main {
 
 	public static void main(String args[]){
 		String fileName;
@@ -43,12 +43,12 @@ import java.util.Stack;
 			System.exit(0);
 		}
 
-        String inputFileName = args[0]; // Get the arg value which is userinput, the rpal tree input (txt file)
-
-        STTransformer TreeConstructor = new STTransformer();
-
-        TreeConstructor.constructAST(inputFileName);
-        // Construct the Abstract Syntax Tree from the data in the txt file
-        TreeConstructor.constructST();
+//        String inputFileName = args[0]; // Get the arg value which is userinput, the rpal tree input (txt file)
+//
+//        STTransformer TreeConstructor = new STTransformer();
+//
+//        TreeConstructor.constructAST(inputFileName);
+//        // Construct the Abstract Syntax Tree from the data in the txt file
+//        TreeConstructor.constructST();
 	}
 }

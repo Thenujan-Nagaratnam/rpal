@@ -4,7 +4,6 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Stack;
 
 /*
  * **************************************************
@@ -26,6 +25,8 @@ class Lexical {
 	public ArrayList<String> reserved = new ArrayList<String>();	//Reserved tokens of grammar
 	
 	//Constructor to open file for reading
+
+	Lexical(){};
 	
 	Lexical(String fileName) {
 		try {

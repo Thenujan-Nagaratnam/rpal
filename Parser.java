@@ -496,9 +496,11 @@ import java.util.Stack;
 	public String startParsing() {
 		token = l.getToken();
 		E();
+		String AST = "";
 		if (l.getType().equals("<EOF>")) {	//EOF reached
-			return printAST();
+			AST = printAST();
 		}
+		return AST;
 	}
 }
 

@@ -7,7 +7,7 @@ import java.util.Stack;
 //  2. preOrderTraversal  => Traverse the tree in preorder method (root,left,right)
 //  3. preOrder   =>  Set the tree in a array in preorder level.
 class Traversal {
-    Lexical lexer = new Lexer();
+    Lexical lexer = new Lexical();
 
     Stack<Node> stack = new Stack<>();
 
